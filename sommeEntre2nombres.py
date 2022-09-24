@@ -11,4 +11,4 @@ Attention : votre script doit fonctionner peu importe l'ordre dans lequel vous d
 def somme(a, b):
     print(sum(range(min(a, b), max(a, b) + 1)))
 
-print(somme(7, 6))
+somme(7, 6)
