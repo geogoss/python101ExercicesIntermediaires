@@ -12,7 +12,7 @@ retourner la valeur True.
 Aller plus loin : Essayez cette fois-ci de ne pas utiliser la fonction reversed.
 '''
 
-mot1 = "Un roc cornu"
+mot = "Un roc cornu"
 mot2 = "test pour le fun"
 mot3 = "aca"
 mot4 = "sfdretgchdkjnzfuib"
@@ -24,9 +24,9 @@ print(inverse)
 '''
 
 def palindrome(mot):
-    mot = list(mot.replace(" ",""))
-    palin = "".join(mot).lower()
-    drome = "".join(mot[::-1]).lower()
+    mot = list(mot.replace(" ","").lower())
+    palin = "".join(mot)
+    drome = "".join(mot[::-1])
     print(palin)
     print(drome)
     if palin == drome:
@@ -34,7 +34,18 @@ def palindrome(mot):
     return False
 
 
-print(palindrome(mot4))
+print(palindrome(mot))
+
+# Façon bcp plus efficace :
+mot_lower = mot.lower().replace(" ", "")
+
+if mot_lower == mot_lower[::-1]:
+    print(True)
+else:
+    print(False)
+
+
+
 
 
 
